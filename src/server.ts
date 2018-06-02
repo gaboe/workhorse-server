@@ -44,7 +44,7 @@ app.use(cors(corsOptions));
 if (process.env.PORT) {
   const port = process.env.PORT;
   app.set("port", port);
-  app.get("/", (_, res) => res.send("This is EZA!"));
+  app.get("/", (_, res) => res.send("This is WorkHorse!"));
 
   app.use(
     "/graphql",

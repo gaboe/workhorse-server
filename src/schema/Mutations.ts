@@ -15,12 +15,10 @@ const Mutation = new GraphQLObjectType({
         }
       },
       type: new GraphQLNonNull(PageType),
-      resolve(_, args) {
-        const { name, content } = args as AddPageArgs;
+      resolve(_, { name, content }) {
         return addPage(name, content);
       }
     }
   }
 });
-type AddPageArgs = { name: string; content: string };
 export { Mutation };
