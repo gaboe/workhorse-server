@@ -11,7 +11,7 @@ const RootQuery = new GraphQLObjectType({
           type: new GraphQLNonNull(GraphQLString)
         }
       },
-      type: new GraphQLNonNull(PageType),
+      type: PageType,
       async resolve(_, { name }) {
         return getPage(name);
       }
